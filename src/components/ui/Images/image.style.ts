@@ -1,4 +1,4 @@
-const commonStyles= 'w-40';
+const commonStyles= 'w-[160px] h-[120px] object-cover';
 
 export const styles = {
   default: `${commonStyles}`,

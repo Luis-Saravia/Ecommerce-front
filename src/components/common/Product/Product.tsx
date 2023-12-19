@@ -1,33 +1,40 @@
 import React from "react";
-import { Image } from '../../index';
-import company from '../../../assets/company.png';
+import { Image } from "../../index";
+import company from "../../../assets/company.png";
 
-export function Product({  }) {
+interface IParamsProduct {
+  price: number;
+  stock: number;
+  quantityProducts: number;
+  imageProduct: string;
+}
+
+export function Product({
+  price,
+  stock,
+  quantityProducts,
+  imageProduct,
+}: IParamsProduct) {
   return (
-    <div 
-      className='
+    <div
+      className="
       rounded-3xl
       shadow-lg shadow-black bg-emerald-500 
       border-4
       overflow-hidden
       w-[155px]
-      m-5'
+      m-5"
     >
-      <Image
-        src={company}
-        alt={company}
-      />
-      <ul
-        className='p-4'
-      >
+      <Image src={imageProduct} alt={imageProduct} />
+      <ul className="p-4">
         <li>
-          <strong>Precio:</strong> $500
+          <strong>Precio:</strong> ${price}
         </li>
         <li>
-          <strong>Stock:</strong> 50
+          <strong>Stock:</strong> {stock}
         </li>
         <li>
-          <strong>Productos:</strong> 3
+          <strong>Productos:</strong> {quantityProducts}
         </li>
       </ul>
     </div>

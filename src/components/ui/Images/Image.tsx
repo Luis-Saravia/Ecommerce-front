@@ -6,6 +6,7 @@ export function Image({ optionStyleImage = 'default', ...props }: PropsImage) {
     <img 
       {...props}
       className={styles[optionStyleImage]}
+      // className='object-cover'
     />
   )
 }
